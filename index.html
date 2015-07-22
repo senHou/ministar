@@ -1,0 +1,81 @@
+  <!DOCTYPE HTML>
+  <html>
+     <head>
+        <title>home</title>
+        <meta name="description" content="ministart home" />
+        <meta name="keywords" content="website keywords, website keywords" />
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+        <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+	<script language ="javascript" > 
+		var curIndex=0; 
+		var timeInterval=2000; 
+		var arr=new Array(); 
+		arr[0]="style/capsule.jpeg"; 
+		arr[1]="style/gym.jpeg"; 
+		arr[2]="style/restaurant.jpeg";  
+		setInterval(changeImg,timeInterval); 
+		function changeImg() 
+		{ 
+			var obj=document.getElementById("obj"); 
+			if (curIndex==arr.length-1) 
+			{ 
+				curIndex=0; 
+			} 
+			else 
+			{ 
+				curIndex+=1; 
+			} 
+			obj.src=arr[curIndex]; 
+		} 
+   </script> 
+    </head>
+  
+     <body>
+        <div id="main">
+          <div id="header">
+              <div id="logo">
+                 <div id="logo_text">
+                    <!-- class="logo_colour", allows you to change the colour of the text -->
+                    <h1><a href="index.html">mini<span class="logo_colour">star</span></a></h1>
+                 </div>
+              </div>
+              <div id="menubar">
+                 <ul id="menu">
+                    <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+                    <li class="selected"><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="policy.html">Policy</a></li>
+                 </ul>
+              </div>
+           </div>
+           <div id="site_content">
+              <div class="sidebar">
+                 <!-- insert your sidebar items here -->
+                 <h3>Latest News</h3>
+                 <h4>New capsule</h4>
+                 <h5>September 1st, 2011</h5>
+                 <p>A new capsule will come soon...</p>
+                 <p></p>
+                 <h4>Popular Dish</h4>
+                 <h5>September 1st, 2011</h5>
+                 <p>We provide different kinds of food.<br /><a href="dish.html">Read more</a></p>
+              </div>
+              <div id="content">
+                 <!-- insert the page content here -->
+                 <h1>Welcome to Mini Star Hotel</h1>
+                 <hr/>
+                 <p class="left">
+                   <img id="obj" src ="style/capsule.jpeg" alt="images" width="350" height="260"/>
+                 </p>
+                 <p>Mini star is a experienced hotel company which provides capsule hotel for people. We offer excellent services, great facilities and amazing food. We are the only one capsule hotel in Melbourne. We were found at 2008 with only hotel services. Now we are employed over 100 stuff, who are well-trained.</p>
+              </div>
+           </div>
+           <div id="content_footer"></div>
+           <div id="footer">
+              Copyright &copy;ministar Company 2011
+           </div>
+        </div>
+     </body>
+  </html>
